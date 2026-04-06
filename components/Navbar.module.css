@@ -1,0 +1,143 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 18px 0;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.navbar.scrolled {
+  background: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 var(--color-border);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: -0.5px;
+  flex-shrink: 0;
+}
+
+.logoDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  box-shadow: 0 0 8px var(--color-primary);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-left: auto;
+}
+
+.navLink {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: var(--color-white);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.btnGhost {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  transition: color 0.2s;
+}
+
+.btnGhost:hover {
+  color: var(--color-white);
+}
+
+.btnPrimary {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-white);
+  background: var(--color-primary);
+  padding: 9px 20px;
+  border-radius: var(--radius);
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btnPrimary:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-1px);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  padding: 4px;
+  margin-left: auto;
+}
+
+.burgerLine {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-surface);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 24px;
+    gap: 20px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav.navOpen {
+    display: flex;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .navLink {
+    font-size: 1rem;
+  }
+}
