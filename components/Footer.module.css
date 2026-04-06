@@ -1,0 +1,145 @@
+.footer {
+  border-top: 1px solid var(--color-border);
+  padding: 72px 0 40px;
+}
+
+.top {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 56px;
+}
+
+.brand {
+  flex: 0 0 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.logoDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  box-shadow: 0 0 8px var(--color-primary);
+}
+
+.brandDesc {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  line-height: 1.65;
+  max-width: 220px;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.social {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.social:hover {
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.linkGroups {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.groupTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: var(--color-white);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 28px;
+  border-top: 1px solid var(--color-border);
+}
+
+.copy {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+.madeWith {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+@media (max-width: 900px) {
+  .top {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .brand {
+    flex: none;
+  }
+  .linkGroups {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .linkGroups {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
