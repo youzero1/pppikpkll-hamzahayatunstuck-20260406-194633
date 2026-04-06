@@ -1,0 +1,239 @@
+.section {
+  padding: 100px 0;
+  background: rgba(255,255,255,0.015);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sectionHead {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 14px;
+}
+
+.title {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  color: var(--color-white);
+  letter-spacing: -0.8px;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--color-muted);
+  margin-bottom: 28px;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+}
+
+.toggleActive {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.toggleInactive {
+  color: var(--color-muted);
+}
+
+.toggleBtn {
+  width: 44px;
+  height: 24px;
+  background: var(--color-border);
+  border-radius: 100px;
+  position: relative;
+  transition: background 0.25s;
+  flex-shrink: 0;
+}
+
+.toggleBtnOn {
+  background: var(--color-primary);
+}
+
+.toggleThumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-white);
+  transition: transform 0.25s;
+}
+
+.toggleBtnOn .toggleThumb {
+  transform: translateX(20px);
+}
+
+.saveBadge {
+  background: rgba(0,212,255,0.12);
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 100px;
+  margin-left: 6px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.popular {
+  border-color: var(--color-primary);
+  background: rgba(108,99,255,0.06);
+  box-shadow: 0 0 40px rgba(108,99,255,0.18);
+}
+
+.popularBadge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.planName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.planDesc {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.priceRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.currency {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.4;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-white);
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.period {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-bottom: 6px;
+}
+
+.billedAnnually {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  margin-top: -8px;
+}
+
+.planBtn {
+  display: block;
+  text-align: center;
+  font-size: 0.93rem;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  transition: all 0.2s;
+}
+
+.planBtnPrimary {
+  background: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: 0 0 20px rgba(108,99,255,0.3);
+}
+
+.planBtnPrimary:hover {
+  background: var(--color-primary-hover);
+}
+
+.planBtnGhost {
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  background: transparent;
+}
+
+.planBtnGhost:hover {
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.featureList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.featureItem {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.check {
+  color: #00c864;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+}
